@@ -171,8 +171,13 @@ function getMyNFts() public view returns(ListedNFT[] memory) {
             itemCount +=1;
         } 
     }
-     /*now that ww have a count of NFTS for that person */
-     ListedNFT[]
+    /*now that ww have a count of NFTS for that person */
+    ListedNFT[] memory items = new ListedNFT[](itemCount);
+    for  (uint i =0 ;i<totalItemCount;i++){
+        if(idToListedToken[i+1].owner == msg.sender || idToListedToken[i+1].seller = msg.sender ) {
+            
+        }
+    }
 }
 
 function executeSale() public {
